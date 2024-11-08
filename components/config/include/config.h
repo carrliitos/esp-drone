@@ -61,7 +61,7 @@
 #endif
 
 #ifdef STM32F4XX 
-  #define CONFIG_BLOCK_ADDRESS    (2048 * (64-1))
+  #define CONFIG_BLOCK_ADDRESS    (1024 * (64-1))
   #define MCU_ID_ADDRESS          0x1FFF7A10
   #define MCU_FLASH_SIZE_ADDRESS  0x1FFF7A22
   #ifndef FREERTOS_HEAP_SIZE
@@ -76,7 +76,7 @@
 #endif
 
 
-//#define DEBUG_UDP
+#define DEBUG_UDP
 //#define DEBUG_EP2
 
 // Task priorities. Higher number higher priority
@@ -107,7 +107,7 @@
 #define ZRANGER_TASK_PRI        5
 #define SENSORS_TASK_PRI        6
 #define STABILIZER_TASK_PRI     7
-#define KALMAN_TASK_PRI         4
+#define KALMAN_TASK_PRI         2
 
 // the kalman filter consumes a lot of CPU
 // for single core systems, we need to lower the priority
